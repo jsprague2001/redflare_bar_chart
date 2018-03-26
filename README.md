@@ -14,8 +14,8 @@ What do you need to see results?
 
 * Edit your html page and add a div ID and class
 * Edit the redflare.css file to:
- * Add your div ID
- * Point to your csv data file
- * Edit colors and text options
+  * Add your div ID
+  * Point to your csv data file
+  * Edit colors and text options
  
 That is it!

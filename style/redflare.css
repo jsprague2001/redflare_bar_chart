@@ -1,0 +1,271 @@
+/* Redflare Styles */
+body {
+    --bPadding: yo!;
+    margin-top: 5%; margin-right: 5%; margin-bottom: 0px; margin-left: 5%;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 75% auto;
+    padding: 1em;
+}
+.grid-item {
+    border: 0px solid rgba(0, 0, 0, 0.8);
+    padding: 1em;
+    text-align: left;
+}
+p.rf_Main {
+    font-family: 'Roboto', sans-serif;
+    font-size: 400%;
+    margin: 0;
+    padding: 0;
+}
+p.rf_mainTitle{
+	font-family: "Helvetica";
+    font-size: 170%;
+    --line-height: 170%;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+    color: maroon;
+    margin-bottom:1em;
+    margin: 0;
+    padding: 0;
+}
+p.rf_subjectTitle {
+	font-family: "Arial";
+	font-size: 23px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+    border-top: solid slategray 1px;
+    padding-top: .5em;
+}
+p.rf_figtitle {
+	font-family: "Arial";
+	font-size: 23px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	line-height: 80%;
+    padding-bottom:0px;
+}
+p.rf_figtitle_sub {
+	font-family: "Arial";
+	font-size: 15px;
+	font-style: normal;
+	font-variant: normal;
+    font-weight: normal;
+    line-height: 80%;
+	color: rgb(94, 91, 91);
+	padding-bottom:0px;
+}
+p.rf_italic {
+	font-style: italic;
+    color: rgb(94, 91, 91);
+}
+#left {
+  width: 70%;
+  float: left;
+}
+#right {
+    margin-left: 30%; /* Change this to whatever the width of your left column is*/
+  }
+p.rf_fix {
+	font-style: italic;
+    color: rgb(94, 91, 91);
+    --clear: both;
+    --top: 0;
+}
+#chartTitle1 {
+    text-align: center;
+    vertical-align: middle;
+    float: left;
+    width: 500px;
+    height: 25px;
+    background-color: Silver;
+}		
+#chartTitle2 {
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 510px;
+    height: 25px;
+    background-color: SlateGray;
+}
+#bar_hist_01 {
+    float: left;
+    width: 900;
+    height: 350;
+    --xAxisTicks: 10;
+    --xSource: https://beta.bls.gov/dataViewer/view/timeseries/CES0000000001;
+	--xLegend: Survey Year;
+    --yLegend: All employees, nonfarm;
+    --ttLabelVal: Employees: ;
+    --ttDateStyle: MY; /*  Y (2018) MY (March 2018) MDY (March 22, 2018) */
+    --numTicks: 10;
+    --dataFile: emp-month.csv;
+    --barStyle: barStyle_002;
+}
+#bar_hist_03 {
+    float: left;
+    width: 700;
+    height: 350;
+    --xAxisTicks: 10;
+    --xSource: Source: U.S. Census Bureau;
+	--xLegend: Survey Year;
+    --yLegend: U.S. Population with Income;
+    --ttLabelDt: Year: ;
+    --ttLabelVal: Households: ;
+    --numTicks: 6;
+    --dataFile: survey-pop.csv;
+    --barStyle: barStyle_001;
+    --ttBackground: rgb(202, 202, 202);
+}
+#bar_hist_05 {
+    float: left;
+    width: 700;
+    height: 350;
+    background-color: rgb(226, 231, 238);
+    --xAxisTicks: 10;
+    --xSource: Source: Bureau of Labor Statistics;
+	--xLegend: Survey Year;
+	--yLegend: Average Hourly Wage;
+    --numTicks: 10;
+    --dataFile: wage-year.csv;
+    --barStyle: barStyle_003;
+    --ttLabelDt: Date: ;
+    --ttLabelVal: $;
+    --ttDateStyle: MDY; /*  Y (2018) MY (March 2018) MDY (March 22, 2018) */
+    --ttBackground: rgb(255, 255, 255);
+}
+#line_time_01 {
+    float: left;
+    width: 700;
+    height: 350;
+    background-color: rgb(233, 233, 233);
+    --xAxisTicks: 10;
+    --xSource: Source: Bureau of Labor Statistics;
+	--xLegend: Survey Year;
+	--yLegend: Average Hourly Wage;
+    --numTicks: 10;
+    --dataFile: survey-pop.csv;
+    --barStyle: barStyle_003;
+    --ttLabelDt: Year: ;
+    --ttLabelVal: $;
+}
+#radial_edge_01 {
+    float: left;
+    width: 650;
+    height: 650;
+    background-color: rgb(238, 242, 247);
+    --xAxisTicks: 10;
+    --xSource: Source: G20 https://www.g20.org/en/g20/g20-participants;
+	--xLegend: Survey Year;
+	--yLegend: Average Hourly Wage;
+    --numTicks: 10;
+    --dataFile: flaredata.json;
+    --barStyle: barStyle_003;
+    --ttLabelDt: Year: ;
+    --ttLabelVal: $;
+}
+.barStyle_001 {
+    fill: slategray;
+}
+.barStyle_002 {
+    fill: silver;
+}
+.barStyle_003 {
+    fill: saddlebrown;
+}
+.barStyle_001:hover {
+    fill: maroon;
+}
+.barStyle_002:hover {
+    fill: maroon;
+}
+.barStyle_003:hover {
+    fill: silver;
+}
+div.tooltip {	
+    position: absolute;			
+    text-align: center;			
+    --width: 100px;					
+    --height: 30px;					
+    padding: 4px;				
+    font: 12px sans-serif;		
+    background: lightsteelblue;	
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;
+    opacity: 0;			
+}
+.textStyle_001
+{
+    font-family: Helvetica;
+    fill: black;
+    font-size: 12px;
+}
+.textStyle_002
+{
+    font-family: Helvetica;
+    fill: silver;
+    font-size: 12px;
+}
+.textStyle_003
+{
+    font-family: Helvetica;
+    fill: steelblue;
+    font-size: 12px;
+}
+.clear
+{
+    clear: both;
+}
+.line {
+    fill: none;
+    stroke: black;
+    stroke-width: 3;
+}
+.dot {
+    fill: rgb(163, 208, 245);
+    stroke: steelblue;
+}
+.node {
+    font: 300 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    fill: #bbb;
+  }
+  
+  .node:hover {
+    fill: #000;
+  }
+  .link {
+    stroke: steelblue;
+    stroke-opacity: 0.4;
+    fill: none;
+    pointer-events: none;
+  }
+  .node:hover,
+  .node--source,
+  .node--target {
+    font-weight: 700;
+  }
+  
+  .node--source {
+    fill: #339966;
+  }
+  
+  .node--target {
+    fill: #339966;
+  }
+  .link--source,
+  .link--target {
+    stroke-opacity: 1;
+    stroke-width: 2px;
+  }
+  
+  .link--source {
+    stroke: #339966;
+  }
+  
+  .link--target {
+    stroke: #339966;
+  }

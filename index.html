@@ -1,0 +1,108 @@
+<html>
+<!--Redflare Template (c) 2018 Redarc Group, LLC-->
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redflare Bar Charts</title>
+<link type="text/css" rel="stylesheet" href="./style/style.css"/> 
+<link type="text/css" rel="stylesheet" href="./style/redflare.css" title="redflare_css" />
+<link type="text/css" rel="stylesheet" href="./style/tables.css"/>
+
+</head>
+<body>
+
+<script type="text/javascript" src="./js/d3.min.js"></script>
+
+<!--
+<script src="https://d3js.org/d3.v4.min.js"></script> 
+-->
+<p class="rf_mainTitle">Barcharts (U.S. Economic Data)</p>
+
+<p>To illustrate a realistic use-case for Redflare <strong>bar charts</strong> we used publically available data to 
+create a few visulizations.</p>
+
+<p>These time series <strong>bar charts</strong> can be customized to show more or fewer labels (on the x axis)
+based on the size of the chart.  The Redflare code will sort the data by date and provide the option
+to show more or fewer date points along the x axis.  Redflare also provides custom tooltip formatting.</p>
+
+<p class="rf_italic">The US Census Bureau conducts an anual survey which is named the CPS (Current Population Survey).  
+Over the years the U.S. Population has grown, and with it the number of households surved has increased as shown 
+in the following chart.</p>
+
+<p class="rf_figtitle">Current Population Survey</p>
+<p class="rf_figtitle_sub">Number of households surveyed (30 years)</p>
+<div class="clear"></div>
+
+<div id="container_03">
+        <div id="bar_hist_03" class="rfBarTime">
+        </div>
+</div>
+<div class="clear"></div>
+
+<p class="rf_italic">Total U.S. workforce over a 20 year period.  Dips in the workforce are evident for
+     the 2001 and 2007 recessions.  This chart uses 252 data points with monthly precision.</p>
+
+<p class="rf_figtitle">Workforce by Month</p>
+<p class="rf_figtitle_sub">All employees, nonfarm (20 years)</p>
+<div class="clear"></div>
+
+<div id="container_01">
+    <div id="bar_hist_01" class="rfBarTime">
+    </div>
+</div>
+<div class="clear"></div>
+
+
+
+
+<p class="rf_italic">Over a ten year period average the average hourly wage increased by $4.70 per hour.
+        This graph uses a custom background color and different formatting for the tooltip.  Date labels are
+            shown for each column.
+</p>
+
+<p class="rf_figtitle">Average Hourly Wage</p>
+<p class="rf_figtitle_sub">All employees, nonfarm (10 years)</p>
+<div class="clear"></div>
+
+<div id="container_05">
+    <div id="bar_hist_05" class="rfBarTime">
+    </div>
+</div>
+<div class="clear"></div>
+
+<p>This chart code uses only two values.  A date value and a numeric value.</p>
+
+<div class="divTable">
+    <div class="divTableBody">
+        <div class="divTableRow">
+            <div class="divTableCell">&nbsp;Chart Type</div>
+            <div class="divTableCell">&nbsp;Development Date</div>
+        </div>
+        <div class="divTableRow">
+            <div class="divTableCell">&nbsp;Bar Histogram</div>
+            <div class="divTableCell">&nbsp;Current</div>
+        </div>
+        <div class="divTableRow">
+                <div class="divTableCell">&nbsp;Bar Histogram - Real Time</div>
+                <div class="divTableCell">&nbsp;April 2018</div>
+        </div>
+        <div class="divTableRow">
+            <div class="divTableCell">&nbsp;Bar Chart</div>
+            <div class="divTableCell">&nbsp;April 2018</div>
+        </div>
+        <div class="divTableRow">
+                <div class="divTableCell">&nbsp;Line Histogram</div>
+                <div class="divTableCell">&nbsp;May 2018</div>
+        </div>
+    </div>
+</div>
+
+<p>Data requirements information here.</p>
+
+<script id="rfInitAll_js" type="text/javascript" src="./js/redflare_init_all.js"></script>
+<script id="rfBarHist_js" type="text/javascript" src="./js/redflare_bar_time.js"></script>
+<script id="rfBarHist_js" type="text/javascript" src="./js/redflare_line_time.js"></script>
+
+</body>
+
+</html>

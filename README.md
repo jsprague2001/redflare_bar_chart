@@ -1,2 +1,3 @@
 # redflare_bar_chart
-Bar chart JS
+Bar charts based on D3.js
+Simple charts with no code
